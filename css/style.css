@@ -1,0 +1,12 @@
+body {
+	color: red;
+}
+
+#click {
+	display: block;
+}
+
+#msg {
+	display: none;
+}
+
