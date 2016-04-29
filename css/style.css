@@ -1,5 +1,4 @@
 body {
-	color: red;
 }
 
 #click {
@@ -7,6 +6,10 @@ body {
 }
 
 #msg {
+	display: none;
+}
+
+.typed-cursor {
 	display: none;
 }
 
