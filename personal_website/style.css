@@ -1,0 +1,49 @@
+body {
+	font-family: sans-serif;
+	background-color: #1A1C24;
+	color: #FFF;
+}
+
+#heart, #echo {
+	position: fixed;
+	width: 300px;
+	height: 300px;
+	top: calc(50% - 150px);
+	left: calc(25% - 150px);
+	text-align: center;
+	transform: scale(0.95);
+}
+
+#heart::before, #heart::after, #echo::before, #echo::after {
+	content: '';
+	position: absolute;
+	top: 40px;
+	width: 150px;
+	height: 240px;
+	background: #C66C75;
+	border-radius: 150px 150px 0 0;
+	transform: rotate(-45deg);
+	transform-origin: 0 100%;
+}
+
+#heart { z-index: 8; }
+#echo  { z-index: 7; }
+
+#heart::before, #echo::before {
+	left: 150px;
+}
+
+#heart::after, #echo::after {
+	left: 0;
+	transform: rotate(45deg);
+	transform-origin: 100% 100%;
+}
+
+#heart::after {
+	box-shadow: inset -6px -6px 0px 6px rgba(255,255,255,0.1);
+}
+
+#heart::before {
+	box-shadow: inset 6px 0px 6px rgba(255,255,255,0.1);
+}
+

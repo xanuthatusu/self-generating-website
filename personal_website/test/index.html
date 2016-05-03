@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+	<title>Anthony George</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<h1>Hello, your location is...</h1>
+	<button onclick="getLocation()">Try it...</button>
+	<p id="demo"></p>
+	<script>
+	var x = document.getElementById("demo");
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+			x.innerHTML = "Geolocation is not supported by this browser.";
+		}
+	}
+	function showPosition(position) {
+		x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+	}
+	</script>
+</body>
+</html>
+
